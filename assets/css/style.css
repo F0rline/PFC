@@ -1,13 +1,21 @@
 h1 {
     font-family: sofia-pro,sans-serif;
-    font-weight: 700;
-     font-style: normal;
-    font-size: 100px;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 60px;
     color: #00256E;
 }
 
 main {
-    padding: 30px;
+    padding: 0px 20px;
+}
+
+.rules {
+    font-size: 20px;
+    font-family: sofia-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #00256E;
 }
 
 .linear-simple{
@@ -15,7 +23,7 @@ main {
     background-image: linear-gradient(0, #ACD3FF, white);  
 }
 .linear-inverted{
-    padding: 10%;
+    padding: 10% 0px;
     background-image: linear-gradient(0, white, #ACD3FF);  
 }
 body{
