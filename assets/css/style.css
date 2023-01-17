@@ -2,7 +2,10 @@
     padding: 10%;
     background-image: linear-gradient(0, #ACD3FF, white);  
 }
-
+.linear-inverted{
+    padding: 10%;
+    background-image: linear-gradient(0, white, #ACD3FF);  
+}
 body{
     background-color: #ACD3FF;
 }
