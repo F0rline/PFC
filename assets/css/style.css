@@ -6,21 +6,37 @@ h1 {
     color: #00256E;
 }
 
-main {
-    padding: 0px 20px;
-}
-
-.placeHolder {
-    height: 85px;
-    width: auto;
-}
-
-.rules {
+h3 {
     font-size: 20px;
     font-family: sofia-pro,sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #00256E;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: sofia-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #00256E;
+}
+
+main {
+    padding: 0px 20px;
+}
+
+.battle {
+    font-family: sofia-pro,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #00256E;
+}
+
+.placeHolder {
+    height: 85px;
+    width: auto;
 }
 
 .linear-simple{
@@ -33,4 +49,110 @@ main {
 }
 body{
     background-color: #ACD3FF;
+}
+
+.col-result {
+    padding-top: 40px;
+}
+
+.col-result h3 {
+    font-family: sofia-pro,sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 35px;
+    color: #00256E;
+    margin-bottom: 1px;
+}
+
+.col-result p {
+    font-family: sofia-pro,sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 18px;
+    color: #00256E;
+    margin-bottom: 8px;
+}
+
+.col-result button {
+    font-family: sofia-pro,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    color: #00256E;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-color: #00256E;
+    padding: 2px 15px;
+}
+
+.choise p {
+    font-family: sofia-pro,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+    color: #00256E;
+}
+
+.select-img {
+    width: 65px;
+    height: auto;
+}
+
+.stats {
+    font-family: sofia-pro,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    color: #00256E;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1280px) {
+
+    h1 {
+        font-size: 100px;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .size-desktop {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 0px 100px;
+    }
+
+    .smartphone {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .select-img {
+        width: 82px;
+        height: auto;
+    }
+
+    .placeHolder {
+        width: 240px;
+        height: auto;
+    }
+
+    .white-bg {
+        background-color: white;
+        padding: 30px 50px;
+        border-radius: 30px;
+    }
 }
