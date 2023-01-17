@@ -1,0 +1,8 @@
+.linear-simple{
+    padding: 10%;
+    background-image: linear-gradient(0, #ACD3FF, white);  
+}
+
+body{
+    background-color: #ACD3FF;
+}
