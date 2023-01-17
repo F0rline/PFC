@@ -1,3 +1,7 @@
+header {
+    background-image: linear-gradient(0, #ACD3FF, white); 
+}
+
 h1 {
     font-family: sofia-pro,sans-serif;
     font-weight: bolder;
@@ -26,7 +30,15 @@ main {
     padding: 0px 20px;
 }
 
-.battle {
+.card-user p {
+    font-family: sofia-pro,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #00256E;
+}
+
+.card-computer p {
     font-family: sofia-pro,sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -37,11 +49,6 @@ main {
 .placeHolder {
     height: 85px;
     width: auto;
-}
-
-.linear-simple{
-    padding: 3%;
-    background-image: linear-gradient(0, #ACD3FF, white);  
 }
 .linear-inverted{
     padding: 10% 0px;
@@ -110,10 +117,16 @@ body{
     display: none;
 }
 
+  
+
 @media screen and (min-width: 1280px) {
 
     h1 {
         font-size: 100px;
+    }
+
+    .rules {
+        margin-bottom: 50px;
     }
 
     h3 {
@@ -122,11 +135,13 @@ body{
 
     h4 {
         font-size: 25px;
+        margin-bottom: 50px;
     }
 
     .size-desktop {
         font-size: 30px;
     }
+
 
     main {
         padding: 0px 100px;
@@ -138,6 +153,7 @@ body{
 
     .desktop {
         display: block;
+        margin-bottom: 50px;
     }
 
     .select-img {
@@ -150,9 +166,42 @@ body{
         height: auto;
     }
 
+    .col-result h3 {
+        font-size: 97px;
+        color: #00256E;
+        margin-bottom: 1px;
+    }
+    
+    .col-result p {
+        font-size: 48px;
+        color: #00256E;
+        margin-bottom: 8px;
+    }
+    
+    .col-result button {
+        font-size: 34px;
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.50);
+        border: 4px solid;
+        border-color: #00256E;
+        padding: 2px 50px;
+    }
+
+    .card-computer p {
+        font-size: 48px;
+    }
+
+    .card-user p {
+        font-size: 48px;
+    }
+
     .white-bg {
         background-color: white;
         padding: 30px 50px;
         border-radius: 30px;
+    }
+
+    .stats p {
+        font-size: 35px;
     }
 }
