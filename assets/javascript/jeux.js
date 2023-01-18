@@ -85,12 +85,7 @@ var button = document.getElementById("launch").addEventListener("click", functio
       (userChoice === "spock" &&
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
-      console.log(
-        UserScore=UserScore++
-      );
+      document.getElementById("userScore").innerHTML = "Votre Score: " + UserScore++;
       } else {
-      console.log(
-        computerScore=computerScore++
-      );
-      }
-  })
+        document.getElementById("computerScore").innerHTML = "Score IA: " + computerScore++;
+      }})
