@@ -8,8 +8,6 @@ let userChoice = '';
 
 // let cleanScore = localStorage.clear();
 
-
-
 document.getElementById("rock").addEventListener("click", function(userChoice) {
   userChoice = "rock";
   document.getElementById("choise-user").src="/assets/img/stone.svg"
