@@ -33,8 +33,8 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 // let cleanScore = localStorage.clear();
 
 
-UserScore = 0;
-computerScore = 0;
+userScore = 1;
+computerScore = 1;
 
 document.getElementById("rock").addEventListener("click", function (){
   userChoice = "rock";
@@ -89,7 +89,8 @@ var button = document.getElementById("launch").addEventListener("click", functio
   }
 
     if (userChoice === computerChoice) {
-      console.log("Egalité !");
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Égalité !"
     } else if (
       (userChoice === "rock" &&
         (computerChoice === "scissor" || computerChoice === "lizard")) ||
@@ -102,8 +103,15 @@ var button = document.getElementById("launch").addEventListener("click", functio
       (userChoice === "spock" &&
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
-      document.getElementById("userScore").innerHTML = "Votre Score: " + UserScore++;
+      let scoreUser = document.getElementById("userScore");
+      scoreUser.innerHTML = "Votre Score: " + userScore++;
+
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Victoire !"
       } else {
-        document.getElementById("computerScore").innerHTML = "Score IA: " + computerScore++;
+        let scoreIa = document.getElementById("computerScore");
+        scoreIa.innerHTML = "Score IA: " + computerScore++;
+
+        let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Défaite !"
       }})
-      // test
