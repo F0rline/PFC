@@ -17,13 +17,14 @@
     <main>
         <div class="border-desktop">
             <div class="game">
-                <h3 class="rules">En 10 parties essayer de battre l'ordinateur.</h3>
+                <h3 class="rules">En 10 manches essayer de battre l'ordinateur.</h3>
+                <h3 class="nb-game">Manche n°X</h3>
                 <div>
                     <div class="scoreboard">
                         <div class="battle row">
                             <div class="card-user col text-center">
                                 <p>Score :</p>
-                                <img id="choise-user" class="img-fluid placeHolder" src="/assets/img/placeholder.svg" alt="placeholder.svg">
+                                <img id="choise-user" class="placeHolder" src="/assets/img/placeholder.svg" alt="placeholder.svg">
                                 <p>User</p>
                             </div>
                             <div class="col-result text-center col">
@@ -46,31 +47,36 @@
                             </legend>
                             <div class="choise row text-center">
                                 <div class="paper col">
-                                    <img class="select-img" src="/assets/img/paper.svg"/>
-                                    <input type="radio" id="paper" name="choice" class="paper" value="paper"></input>
-                                    <label for="paper">Feuille</label>
+                                    <label for="paper">
+                                        <img class="select-img" src="/assets/img/paper.svg"/>
+                                        Feuille</label>
+                                    <input type="radio" id="paper" name="choice" class="radio-button paper" value="paper"></input>
                                 </div>
                                 <div class="rock col">
-                                    <img class="select-img" src="/assets/img/stone.svg"/>
-                                    <input type="radio" id="rock" name="choice" class="rock" value="rock"></input>
-                                    <label for="rock">Pierre</label>
+                                    <label for="rock">
+                                        <img class="select-img" src="/assets/img/stone.svg"/>
+                                        Pierre</label>
+                                    <input type="radio" id="rock" name="choice" class="radio-button rock" value="rock"></input>
                                 </div>
                                 <div class="scissor col">
-                                    <img class="select-img" src="/assets/img/scissors.svg"/>
-                                    <label for="scissor">Ciseau</label>
-                                    <input type="radio" id="scissor" name="choice" class="scissor" value="scissor"></input>
+                                    <label for="scissor">
+                                        <img class="select-img" src="/assets/img/scissors.svg"/>
+                                        Ciseau</label>
+                                    <input type="radio" id="scissor" name="choice" class="radio-button scissor" value="scissor"></input>
                                 </div>
                             </div>
                             <div class="row text-center">
                                 <div class="lizard col">
+                                    <label for="lizard">
                                     <img class="select-img" src="/assets/img/lizard.svg"/>
-                                    <input type="radio" id="lizard" name="choice" class="lizard" value="lizard"></input>
-                                    <label for="lizard">Lézard</label>
+                                    Lézard</label>
+                                    <input type="radio" id="lizard" name="choice" class="radio-button lizard" value="lizard"></input>
                                 </div>
                                 <div class="spoke col">
+                                    <label for="spocke">
                                     <img class="select-img" src="/assets/img/spocke.svg"/>
-                                    <input type="radio" id="spocke" name="choice" class="spoke" value="spocke"></input>
-                                    <label for="spocke">Spocke</label>
+                                    Spock</label>
+                                    <input type="radio" id="spocke" name="choice" class="radio-button spoke" value="spocke"></input>
                                 </div>
                             </div>
                         </form>

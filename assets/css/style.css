@@ -96,7 +96,7 @@ body{
     padding: 2px 15px;
 }
 
-.choise p {
+.choose label {
     font-family: sofia-pro,sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -118,6 +118,10 @@ body{
 }
 
 .desktop {
+    display: none;
+}
+
+.radio-button {
     display: none;
 }
 
@@ -191,10 +195,8 @@ body{
         font-size: 30px;
     }
 
-    .white-bg {
-        background-color: white;
-        padding: 30px 50px;
-        border-radius: 30px;
+    .choose label {
+        font-size: 18px;
     }
 
     .stats p {
