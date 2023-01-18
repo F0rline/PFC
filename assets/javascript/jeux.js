@@ -1,12 +1,28 @@
 var userChoice;
 var radioButtons = document.getElementsByName("choice");
+
 console.log(radioButtons)
     if (radioButtons.checked) {
         userChoice = radioButtons.className;
         console.log(userChoice);
     }
     
+
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
+
+
+
+// Jouer un son
+
+// var playButton = document.getElementById("play-button");
+// var audio = document.getElementById("my-audio");
+
+// playButton.addEventListener("click", function() {
+//   audio.play();
+// });
+
+
+// --Save
 
 // let saveScoreJoueur = localStorage.setItem('ScoreJoueur', UserScore);
 // let saveScoreComputer = localStorage.setItem('ScoreOrdinateur', ComputerScore);
@@ -15,6 +31,7 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 // let getScoreComputer = localStorage.getItem('ScoreOrdinateur');
 
 // let cleanScore = localStorage.clear();
+
 
 UserScore = 0;
 computerScore = 0;
@@ -86,12 +103,14 @@ var button = document.getElementById("launch").addEventListener("click", functio
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
       console.log(
+        (UserScore++),
         "Vous avez gagné ! Votre choix était " +
           userChoice +
           " et celui de l'ordinateur était " +
           computerChoice
       );
       } else {
+        (computerScore++),
       console.log(
         "Vous avez perdu ! Votre choix était " +
           userChoice +
