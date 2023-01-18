@@ -23,7 +23,7 @@ document
   .getElementById("paper")
   .addEventListener("click", function (userChoice) {
     userChoice = "paper";
-    document.getElementById("choise-user").src = "/assets/img/paper2.svg";
+    document.getElementById("choise-user").src = "/assets/img/paper.svg";
     console.log(alert(userChoice));
   });
 
@@ -57,7 +57,7 @@ let computerChoice = options[Math.floor(Math.random() * options.length)];
 console.log(computerChoice)
 
 if (computerChoice == "paper") {
-  document.getElementById("choise-computer").src = "/assets/img/paper2.svg";
+  document.getElementById("choise-computer").src = "/assets/img/paper.svg";
   console.log(computerChoice);
 } else if (computerChoice == "rock") {
   document.getElementById("choise-computer").src = "/assets/img/stone.svg";
