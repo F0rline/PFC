@@ -57,14 +57,7 @@ console.log(radioButtons)
     }
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
-let computerChoice = options[Math.floor(Math.random() * options.length)];
-console.log(computerChoice);
-
-var button = document.getElementById("launch").addEventListener("click", startGame());
-
-function startGame() {
-
-  let options = ["rock", "paper", "scissor", "lizard", "spock"];
+var button = document.getElementById("launch").addEventListener("click", function startGame(){
 
   let computerChoice = options[Math.floor(Math.random() * options.length)];
   console.log(computerChoice)
@@ -114,4 +107,4 @@ function startGame() {
           computerChoice
       );
       }
-  }
+  })
