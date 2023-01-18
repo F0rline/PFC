@@ -26,9 +26,6 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 let computerChoice = options[Math.floor(Math.random() * options.length)];
 
-if (userChoice === '') {
-  console.log('not choosed yet');
-} else {
   if (userChoice === computerChoice) {
     console.log("Egalité !");
   } else if (
@@ -42,5 +39,4 @@ if (userChoice === '') {
   } else {
     console.log("Vous avez perdu ! Votre choix était " + userChoice + " et celui de l'ordinateur était " + computerChoice);
   }
-}
 
