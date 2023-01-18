@@ -11,6 +11,46 @@ let userChoice = "";
 UserScore = 0;
 computerScore = 0;
 
+document
+  .getElementById("rock")
+  .addEventListener("click", function (userChoice) {
+    userChoice = "rock";
+    document.getElementById("choise-user").src = "/assets/img/stone.svg";
+    console.log(userChoice);
+  });
+
+document
+  .getElementById("paper")
+  .addEventListener("click", function (userChoice) {
+    userChoice = "paper";
+    document.getElementById("choise-user").src = "/assets/img/paper2.svg";
+    console.log(alert(userChoice));
+  });
+
+document
+  .getElementById("scissor")
+  .addEventListener("click", function (userChoice) {
+    userChoice = "scissor";
+    document.getElementById("choise-user").src = "/assets/img/scissors.svg";
+    console.log(userChoice);
+  });
+
+document
+  .getElementById("lizard")
+  .addEventListener("click", function (userChoice) {
+    userChoice = "lizard";
+    document.getElementById("choise-user").src = "/assets/img/lizard.svg";
+    console.log(userChoice);
+  });
+
+document
+  .getElementById("spocke")
+  .addEventListener("click", function (userChoice) {
+    userChoice = "spoke";
+    document.getElementById("choise-user").src = "/assets/img/spocke.svg";
+    console.log(userChoice);
+  });
+
 var radioButtons = document.getElementsByName("choice");
 console.log(radioButtons)
     if (radioButtons.checked) {
