@@ -109,17 +109,8 @@ var button = document.getElementById("launch").addEventListener("click", functio
       (userChoice === "spock" &&
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
-      console.log(
-        (UserScore++),
-        "Vous avez gagné ! Votre choix était " +
-          userChoice +
-          " et celui de l'ordinateur était " +
-          computerChoice
-      );
+      document.getElementById("userScore").innerHTML = "Votre Score: " + UserScore++;
       } else {
-        (computerScore++),
-      console.log(
-        computerScore=computerScore++
-      );
-      }
-  })
+        document.getElementById("computerScore").innerHTML = "Score IA: " + computerScore++;
+      }})
+      // test

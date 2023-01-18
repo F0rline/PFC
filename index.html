@@ -11,6 +11,7 @@
     <link href="assets\css\style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header class="linear-simple text-center row">
         <h1 class="col">SHIFUMI</h1>
     </header>
@@ -18,66 +19,77 @@
         <div class="border-desktop">
             <div class="game">
                 <h3 class="rules">En 10 manches essayer de battre l'ordinateur.</h3>
+                <!-- Numéro de la manche -->
                 <h3 class="nb-game">Manche n°X</h3>
                 <div>
                     <div class="scoreboard">
                         <div class="battle row">
+                            <!-- Colonne Utilisateur (Score / Choix) -->
                             <div class="card-user col text-center">
-                                <p>Score :</p>
+                                <p class="userScore">Score :</p>
                                 <img id="choise-user" class="placeHolder" src="/assets/img/placeholder.svg" alt="placeholder.svg">
                                 <p>User</p>
                             </div>
+                            <!-- Résultat (Victoire / Égalité / Défaite) -->
                             <div class="col-result text-center col">
                                 <h3>VS</h3>
                                 <p>Résultat</p>
                                 <button class="restart">Rejouer</button>
                                 <button id="launch" class="restart">Lancer</button>
                             </div>
+                            <!-- Colonne IA (Score / Choix) -->
                             <div class="card-computer col text-center">
-                                <p>Score :</p>
+                                <p id="computerScoer">Score :</p>
                                 <img id="choise-computer" class="img-fluid placeHolder" src="/assets/img/placeholder.svg" alt="placeholder.svg">
                                 <p>Computer</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Partie du choix de l'utilisateur -->
                     <div class="choose">
                         <form>
                             <legend>
                                 <h3>Faites votre choix:</h3>
                             </legend>
+                            <!-- Bouton pour le choix de l'utilisateur -->
                             <div class="choise row text-center">
+                                <!-- Bouton choix Feuille -->
                                 <div class="paper col">
                                     <label for="paper">
                                         <img class="select-img" src="/assets/img/paper.svg"/>
-                                        Feuille</label>
+                                        <p>Feuille</p></label>
                                     <input type="radio" id="paper" name="choice" class="radio-button paper" value="paper"></input>
                                     <audio id="testAudio" src="/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3"></audio>
                                 </div>
+                                <!-- Bouton choix Pierre -->
                                 <div class="rock col">
                                     <label for="rock">
                                         <img class="select-img" src="/assets/img/stone.svg"/>
-                                        Pierre</label>
+                                        <p>Pierre</p></label>
                                     <input type="radio" id="rock" name="choice" class="radio-button rock" value="rock"></input>
                                     <audio id="testAudio2" src="/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3"></audio>
                                 </div>
+                                <!-- Bouton choix Ciseaux -->
                                 <div class="scissor col">
                                     <label for="scissor">
                                         <img class="select-img" src="/assets/img/scissors.svg"/>
-                                        Ciseau</label>
+                                        <p>Ciseau</p></label>
                                     <input type="radio" id="scissor" name="choice" class="radio-button scissor" value="scissor"></input>
                                 </div>
                             </div>
                             <div class="row text-center">
+                                <!-- Bouton choix Grenouille -->
                                 <div class="lizard col">
                                     <label for="lizard">
                                     <img class="select-img" src="/assets/img/lizard.svg"/>
-                                    Lézard</label>
+                                    <p>Grenouille</p></label>
                                     <input type="radio" id="lizard" name="choice" class="radio-button lizard" value="lizard"></input>
                                 </div>
+                                <!-- Bouton choix Spock -->
                                 <div class="spoke col">
                                     <label for="spocke">
                                     <img class="select-img" src="/assets/img/spocke.svg"/>
-                                    Spock</label>
+                                    <p>Spock</p></label>
                                     <input type="radio" id="spocke" name="choice" class="radio-button spoke" value="spocke"></input>
                                 </div>
                             </div>
