@@ -7,7 +7,7 @@ document.getElementById("buttonId").addEventListener("click", function(){
 
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
-let computerChoice = options[Math.floor(Math.random() * options.length)];
+let computerChoice = options[Math.floor(Math.getRandomInt(1, options.length + 1))];
 
 if (userChoice === ''){
   console.log('not choosed yet');}
