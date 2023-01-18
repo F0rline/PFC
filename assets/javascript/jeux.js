@@ -28,22 +28,28 @@ button.onclick = function () {
 };
 
 function startGame() {
-  if (computerChoice == "paper") {
-    document.getElementById("choise-computer").src = "/assets/img/paper.svg";
-    console.log(computerChoice);
-  } else if (computerChoice == "rock") {
-    document.getElementById("choise-computer").src = "/assets/img/stone.svg";
-    console.log(computerChoice);
-  } else if (computerChoice == "scissor") {
-    document.getElementById("choise-computer").src = "/assets/img/scissors.svg";
-    console.log(computerChoice);
-  } else if (computerChoice == "lizard") {
-    document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
-    console.log(computerChoice);
-  } else if (computerChoice == "spock") {
-    document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
-    console.log(computerChoice);
-  }
+
+let options = ["rock", "paper", "scissor", "lizard", "spock"];
+
+let computerChoice = options[Math.floor(Math.random() * options.length)];
+console.log(computerChoice)
+
+if (computerChoice == "paper") {
+  document.getElementById("choise-computer").src = "/assets/img/paper.svg";
+  console.log(computerChoice);
+} else if (computerChoice == "rock") {
+  document.getElementById("choise-computer").src = "/assets/img/stone.svg";
+  console.log(computerChoice);
+} else if (computerChoice == "scissor") {
+  document.getElementById("choise-computer").src = "/assets/img/scissors.svg";
+  console.log(computerChoice);
+} else if (computerChoice == "lizard") {
+  document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
+  console.log(computerChoice);
+} else if (computerChoice == "spock") {
+  document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
+  console.log(computerChoice);
+}
 
   if (userChoice === computerChoice) {
     console.log("Egalité !");
@@ -73,4 +79,4 @@ function startGame() {
         computerChoice
     );
     }
-}
+  }
