@@ -2,6 +2,10 @@ header {
     background-image: linear-gradient(white, rgba(1, 1, 1, 0.00)); 
 }
 
+html,body {
+    overflow-x: hidden
+}
+
 h1 {
     font-family: sofia-pro,sans-serif;
     font-weight: bolder;
