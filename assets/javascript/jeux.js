@@ -86,17 +86,11 @@ var button = document.getElementById("launch").addEventListener("click", functio
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
       console.log(
-        "Vous avez gagné ! Votre choix était " +
-          userChoice +
-          " et celui de l'ordinateur était " +
-          computerChoice
+        UserScore=UserScore++
       );
       } else {
       console.log(
-        "Vous avez perdu ! Votre choix était " +
-          userChoice +
-          " et celui de l'ordinateur était " +
-          computerChoice
+        computerScore=computerScore++
       );
       }
   })
