@@ -57,10 +57,41 @@ console.log(radioButtons)
     }
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
-var button = document.getElementById("launch").addEventListener("click", function startGame(){
-
-  let computerChoice = options[Math.floor(Math.random() * options.length)];
+let computerChoice = options[Math.floor(Math.random() * options.length)];
   console.log(computerChoice)
+  console.log(userChoice)
+
+  console.log(userChoice)
+  if (userChoice === computerChoice) {
+    console.log("Egalité !");
+  } else if (
+    (userChoice === "rock" &&
+      (computerChoice === "scissor" || computerChoice === "lizard")) ||
+    (userChoice === "paper" &&
+      (computerChoice === "rock" || computerChoice === "spock")) ||
+    (userChoice === "scissor" &&
+      (computerChoice === "paper" || computerChoice === "lizard")) ||
+    (userChoice === "lizard" &&
+      (computerChoice === "paper" || computerChoice === "spock")) ||
+    (userChoice === "spock" &&
+      (computerChoice === "rock" || computerChoice === "scissor"))
+  ) {
+    console.log(
+      "Vous avez gagné ! Votre choix était " +
+        userChoice +
+        " et celui de l'ordinateur était " +
+        computerChoice
+    );
+    } else {
+    console.log(
+      "Vous avez perdu ! Votre choix était " +
+        userChoice +
+        " et celui de l'ordinateur était " +
+        computerChoice
+    );
+    }
+
+var button = document.getElementById("launch").addEventListener("click", function startGame(computerChoice){
 
   if (computerChoice == "paper") {
     document.getElementById("choise-computer").src = "/assets/img/paper.svg";
@@ -78,33 +109,4 @@ var button = document.getElementById("launch").addEventListener("click", functio
     document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
     console.log(computerChoice);
   }
-
-    if (userChoice === computerChoice) {
-      console.log("Egalité !");
-    } else if (
-      (userChoice === "rock" &&
-        (computerChoice === "scissor" || computerChoice === "lizard")) ||
-      (userChoice === "paper" &&
-        (computerChoice === "rock" || computerChoice === "spock")) ||
-      (userChoice === "scissor" &&
-        (computerChoice === "paper" || computerChoice === "lizard")) ||
-      (userChoice === "lizard" &&
-        (computerChoice === "paper" || computerChoice === "spock")) ||
-      (userChoice === "spock" &&
-        (computerChoice === "rock" || computerChoice === "scissor"))
-    ) {
-      console.log(
-        "Vous avez gagné ! Votre choix était " +
-          userChoice +
-          " et celui de l'ordinateur était " +
-          computerChoice
-      );
-      } else {
-      console.log(
-        "Vous avez perdu ! Votre choix était " +
-          userChoice +
-          " et celui de l'ordinateur était " +
-          computerChoice
-      );
-      }
   })
