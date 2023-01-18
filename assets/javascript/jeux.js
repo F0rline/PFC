@@ -8,6 +8,9 @@ let userChoice = "";
 
 // let cleanScore = localStorage.clear();
 
+UserScore = 0;
+computerScore = 0;
+
 document
   .getElementById("rock")
   .addEventListener("click", function (userChoice) {
@@ -90,7 +93,6 @@ if (userChoice === computerChoice) {
       " et celui de l'ordinateur était " +
       computerChoice
   );
-  cleanScore;
 } else {
   console.log(
     "Vous avez perdu ! Votre choix était " +
@@ -98,5 +100,4 @@ if (userChoice === computerChoice) {
       " et celui de l'ordinateur était " +
       computerChoice
   );
-  cleanScore;
 }
