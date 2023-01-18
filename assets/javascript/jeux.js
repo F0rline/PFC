@@ -106,3 +106,4 @@ var button = document.getElementById("launch").addEventListener("click", functio
       } else {
         document.getElementById("computerScore").innerHTML = "Score IA: " + computerScore++;
       }})
+      // test
