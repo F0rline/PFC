@@ -38,11 +38,8 @@ document.getElementById("lizard").addEventListener("click", function(userChoice)
 });
 
 document.getElementById("spocke").addEventListener("click", function(userChoice) {
-  userChoice = "spocke";
-  document.getElementById("choise-user").src="/assets/img/spocke.svg"
-
-document.getElementById("spoke").addEventListener("click", function(userChoice) {
   userChoice = "spoke";
+  document.getElementById("choise-user").src="/assets/img/spocke.svg"
   console.log(userChoice);
 });
 
