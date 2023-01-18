@@ -21,9 +21,8 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 // });
 
 
-
-playButton = document.getElementById("paper");
-audio = document.getElementById("testAudio");
+playButton = document.getElementById("paper", "rock");
+audio = document.getElementById("testAudio", "testAudio2");
 
 playButton.addEventListener("click", function() {
   audio.play();
