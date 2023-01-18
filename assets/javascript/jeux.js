@@ -11,9 +11,7 @@ let userChoice = "";
 UserScore = 0;
 computerScore = 0;
 
-document
-  .getElementById("rock")
-  .addEventListener("click", function (userChoice) {
+document.getElementById("rock").addEventListener("click", function (userChoice) {
     userChoice = "rock";
     document.getElementById("choise-user").src = "/assets/img/stone.svg";
     console.log(userChoice);
@@ -23,8 +21,8 @@ document
   .getElementById("paper")
   .addEventListener("click", function (userChoice) {
     userChoice = "paper";
-    document.getElementById("choise-user").src = "/assets/img/paper2.svg";
-    console.log(alert(userChoice));
+    document.getElementById("choise-user").src = "/assets/img/paper.svg";
+    console.log(userChoice);
   });
 
 document
