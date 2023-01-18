@@ -2,22 +2,27 @@ let userChoice = '';
 
 document.getElementById("rock").addEventListener("click", function(userChoice) {
   userChoice = "rock";
+  document.getElementById("choise-user").src="/assets/img/stone.svg"
   console.log(userChoice);
 });
 document.getElementById("paper").addEventListener("click", function(userChoice) {
   userChoice = "paper";
-  console.log(userChoice);
+  document.getElementById("choise-user").src="/assets/img/paper.svg"
+  console.log(alert(userChoice));
 });
 document.getElementById("scissor").addEventListener("click", function(userChoice) {
   userChoice = "scissor";
+  document.getElementById("choise-user").src="/assets/img/scissors.svg"
   console.log(userChoice);
 });
 document.getElementById("lizard").addEventListener("click", function(userChoice) {
   userChoice = "lizard";
+  document.getElementById("choise-user").src="/assets/img/lizard.svg"
   console.log(userChoice);
 });
-document.getElementById("spoke").addEventListener("click", function(userChoice) {
-  userChoice = "spoke";
+document.getElementById("spocke").addEventListener("click", function(userChoice) {
+  userChoice = "spocke";
+  document.getElementById("choise-user").src="/assets/img/spocke.svg"
   console.log(userChoice);
 });
 
@@ -25,6 +30,36 @@ document.getElementById("spoke").addEventListener("click", function(userChoice) 
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 let computerChoice = options[Math.floor(Math.random() * options.length)];
+
+  if (computerChoice == 1) {
+    computerChoice = "paper";
+    document.getElementById("choise-computer").src="/assets/img/paper.svg"
+    console.log(computerChoice);
+  }
+
+  else if (computerChoice == 2) {
+    computerChoice = "rock";
+    document.getElementById("choise-computer").src="/assets/img/stone.svg"
+    console.log(computerChoice);
+  }
+
+  else if (computerChoice == 3) {
+    computerChoice = "scissor";
+    document.getElementById("choise-computer").src="/assets/img/scissors.svg"
+    console.log(computerChoice);
+  }
+
+  else if (computerChoice == 4) {
+    computerChoice = "lizard";
+    document.getElementById("choise-computer").src="/assets/img/lizard.svg"
+    console.log(computerChoice);
+  }
+
+  else if (computerChoice == 5) {
+    computerChoice = "spocke";
+    document.getElementById("choise-computer").src="/assets/img/spocke.svg"
+    console.log(computerChoice);
+  }
 
   if (userChoice === computerChoice) {
     console.log("Egalité !");
