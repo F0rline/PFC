@@ -13,13 +13,21 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 
 // Jouer un son
+// paper = document.getElementsById("paper")
+// paperSong = document.getEmentById("testAudio")
 
-// var playButton = document.getElementById("play-button");
-// var audio = document.getElementById("my-audio");
-
-// playButton.addEventListener("click", function() {
-//   audio.play();
+// paper.addEventListener("click", function() {
+//   paperSong.play();
 // });
+
+
+
+playButton = document.getElementById("paper");
+audio = document.getElementById("testAudio");
+
+playButton.addEventListener("click", function() {
+  audio.play();
+});
 
 
 // --Save
