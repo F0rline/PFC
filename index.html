@@ -40,31 +40,40 @@
                         </div>
                     </div>
                     <div class="choose">
-                        <h3>Faites votre choix:</h3>
-                        <div class="choise row text-center">
-                            <div class="paper col">
-                                <img class="select-img" src="/assets/img/paper.svg"/>
-                                <input type="radio" id="paper" class="paper">Feuille</input>
+                        <form>
+                            <legend>
+                                <h3>Faites votre choix:</h3>
+                            </legend>
+                            <div class="choise row text-center">
+                                <div class="paper col">
+                                    <img class="select-img" src="/assets/img/paper.svg"/>
+                                    <input type="radio" id="paper" name="choice" class="paper"></input>
+                                    <label for="paper">Feuille</label>
+                                </div>
+                                <div class="rock col">
+                                    <img class="select-img" src="/assets/img/stone.svg"/>
+                                    <input type="radio" id="rock" name="choice" class="rock"></input>
+                                    <label for="rock">Pierre</label>
+                                </div>
+                                <div class="scissor col">
+                                    <img class="select-img" src="/assets/img/scissors.svg"/>
+                                    <input type="radio" id="scissor" name="choice" class="scissor"></input>
+                                    <label for="scissor">Ciseau</label>
+                                </div>
                             </div>
-                            <div class="rock col">
-                                <img class="select-img" src="/assets/img/stone.svg"/>
-                                <input type="radio" id="rock" class="rock">Pierre</input>
+                            <div class="row text-center">
+                                <div class="lizard col">
+                                    <img class="select-img" src="/assets/img/lizard.svg"/>
+                                    <input type="radio" id="lizard" name="choice" class="lizard"></input>
+                                    <label for="lizard">Lézard</label>
+                                </div>
+                                <div class="spoke col">
+                                    <img class="select-img" src="/assets/img/spocke.svg"/>
+                                    <input type="radio" id="spocke" name="choice" class="spoke"></input>
+                                    <label for="spocke">Spocke</label>
+                                </div>
                             </div>
-                            <div class="scissor col">
-                                <img class="select-img" src="/assets/img/scissors.svg"/>
-                                <button id="scissor" class="scissor">Ciseau</button>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="lizard col">
-                                <img class="select-img" src="/assets/img/lizard.svg"/>
-                                <button id="lizard" class="lizard">Lézard</button>
-                            </div>
-                            <div class="spoke col">
-                                <img class="select-img" src="/assets/img/spocke.svg"/>
-                                <button id="spocke" class="spoke">Spoke</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             <div class="stats">

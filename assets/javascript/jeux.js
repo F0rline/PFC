@@ -54,25 +54,21 @@ document
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 let computerChoice = options[Math.floor(Math.random() * options.length)];
+console.log(computerChoice)
 
-if (computerChoice == 1) {
-  computerChoice = "paper";
+if (computerChoice == "paper") {
   document.getElementById("choise-computer").src = "/assets/img/paper.svg";
   console.log(computerChoice);
-} else if (computerChoice == 2) {
-  computerChoice = "rock";
+} else if (computerChoice == "rock") {
   document.getElementById("choise-computer").src = "/assets/img/stone.svg";
   console.log(computerChoice);
-} else if (computerChoice == 3) {
-  computerChoice = "scissor";
+} else if (computerChoice == "scissor") {
   document.getElementById("choise-computer").src = "/assets/img/scissors.svg";
   console.log(computerChoice);
-} else if (computerChoice == 4) {
-  computerChoice = "lizard";
+} else if (computerChoice == "lizard") {
   document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
   console.log(computerChoice);
-} else if (computerChoice == 5) {
-  computerChoice = "spocke";
+} else if (computerChoice == "spock") {
   document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
   console.log(computerChoice);
 }
