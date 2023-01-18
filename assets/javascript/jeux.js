@@ -24,7 +24,7 @@ document
   .addEventListener("click", function (userChoice) {
     userChoice = "paper";
     document.getElementById("choise-user").src = "/assets/img/paper.svg";
-    console.log(alert(userChoice));
+    console.log(userChoice);
   });
 
 document
