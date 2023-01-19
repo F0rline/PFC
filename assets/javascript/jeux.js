@@ -20,7 +20,7 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 // });
 
 playButton = document.getElementById("paper", "rock");
-audio = document.getElementById("testAudio", "testAudio2");
+audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
 
 playButton.addEventListener("click", function () {
   audio.play();
@@ -38,6 +38,7 @@ playButton.addEventListener("click", function () {
 
 userScore = 1;
 computerScore = 1;
+roundNumber = 2;
 
 document.getElementById("rock").addEventListener("click", function () {
   userChoice = "rock";
@@ -69,6 +70,9 @@ document.getElementById("spocke").addEventListener("click", function () {
   console.log(userChoice);
 });
 let computerChoice = options[Math.floor(Math.random() * options.length)];
+
+  let nbRound = document.getElementById("nb-game");
+  nbRound.innerHTML = "Manche n°" + roundNumber++;
 
 var button = document
   .getElementById("launch")
@@ -119,7 +123,7 @@ var button = document
 
         let viewResult = document.getElementById("result");
         viewResult.innerHTML = "Défaite !";
-        i = i++;
+        i = i++;;
       }
   });
 
