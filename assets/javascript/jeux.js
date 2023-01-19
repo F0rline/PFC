@@ -1,8 +1,6 @@
 var userChoice;
 var radioButtons = document.getElementsByName("choice");
 var i = 0;
-let victoryStat;
-let allGameStat;
 
 console.log(radioButtons);
 if (radioButtons.checked) {
@@ -61,9 +59,9 @@ playButtonSpocke.addEventListener("click", function () {
 
 
 
-function clear()  {
+function clear() {
   localStorage.clear();
-  };
+};
 
 userScore = localStorage.getItem('User-Score');
 computerScore = localStorage.getItem('Computer-Score');
@@ -114,62 +112,62 @@ document.getElementById("spocke").addEventListener("click", function () {
 
 
 function startGame() {
-    let computerChoice = options[Math.floor(Math.random() * options.length)];
-    console.log(userChoice + "vs" + computerChoice);
-    if (computerChoice == "paper") {
-      document.getElementById("choise-computer").src = "/assets/img/paper.svg";
-      console.log(computerChoice);
-    } else if (computerChoice == "rock") {
-      document.getElementById("choise-computer").src = "/assets/img/stone.svg";
-      console.log(computerChoice);
-    } else if (computerChoice == "scissor") {
-      document.getElementById("choise-computer").src =
-        "/assets/img/scissors.svg";
-      console.log(computerChoice);
-    } else if (computerChoice == "lizard") {
-      document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
-      console.log(computerChoice);
-    } else if (computerChoice == "spock") {
-      document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
-      console.log(computerChoice);
-    }
-    if (userChoice === computerChoice) {
-      let viewResult = document.getElementById("result");
-      viewResult.innerHTML = "Égalité !";
-    } else if (
-      (userChoice === "rock" &&
-        (computerChoice === "scissor" || computerChoice === "lizard")) ||
-      (userChoice === "paper" &&
-        (computerChoice === "rock" || computerChoice === "spock")) ||
-      (userChoice === "scissor" &&
-        (computerChoice === "paper" || computerChoice === "lizard")) ||
-      (userChoice === "lizard" &&
-        (computerChoice === "paper" || computerChoice === "spock")) ||
-      (userChoice === "spocke" &&
-        (computerChoice === "rock" || computerChoice === "scissor"))
-    ) {
-      localStorage.setItem('User-Score', userScore);
-      let scoreUser = document.getElementById("userScore");
-      scoreUser.innerHTML = "Votre Score: " + userScore++;
+  let computerChoice = options[Math.floor(Math.random() * options.length)];
+  console.log(userChoice + "vs" + computerChoice);
+  if (computerChoice == "paper") {
+    document.getElementById("choise-computer").src = "/assets/img/paper.svg";
+    console.log(computerChoice);
+  } else if (computerChoice == "rock") {
+    document.getElementById("choise-computer").src = "/assets/img/stone.svg";
+    console.log(computerChoice);
+  } else if (computerChoice == "scissor") {
+    document.getElementById("choise-computer").src =
+      "/assets/img/scissors.svg";
+    console.log(computerChoice);
+  } else if (computerChoice == "lizard") {
+    document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
+    console.log(computerChoice);
+  } else if (computerChoice == "spock") {
+    document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
+    console.log(computerChoice);
+  }
+  if (userChoice === computerChoice) {
+    let viewResult = document.getElementById("result");
+    viewResult.innerHTML = "Égalité !";
+  } else if (
+    (userChoice === "rock" &&
+      (computerChoice === "scissor" || computerChoice === "lizard")) ||
+    (userChoice === "paper" &&
+      (computerChoice === "rock" || computerChoice === "spock")) ||
+    (userChoice === "scissor" &&
+      (computerChoice === "paper" || computerChoice === "lizard")) ||
+    (userChoice === "lizard" &&
+      (computerChoice === "paper" || computerChoice === "spock")) ||
+    (userChoice === "spocke" &&
+      (computerChoice === "rock" || computerChoice === "scissor"))
+  ) {
+    localStorage.setItem('User-Score', userScore);
+    let scoreUser = document.getElementById("userScore");
+    scoreUser.innerHTML = "Votre Score: " + userScore++;
 
-      let viewResult = document.getElementById("result");
-      viewResult.innerHTML = "Victoire !";
-    } else {
-      localStorage.setItem('Computer-Score', computerScore);
-      let scoreIa = document.getElementById("computerScore");
-      scoreIa.innerHTML = "Score IA: " + computerScore++;
+    let viewResult = document.getElementById("result");
+    viewResult.innerHTML = "Victoire !";
+  } else {
+    localStorage.setItem('Computer-Score', computerScore);
+    let scoreIa = document.getElementById("computerScore");
+    scoreIa.innerHTML = "Score IA: " + computerScore++;
 
-      let viewResult = document.getElementById("result");
-      viewResult.innerHTML = "Défaite !";
-    }
-  };
+    let viewResult = document.getElementById("result");
+    viewResult.innerHTML = "Défaite !";
+  }
+};
 
 var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
     clear()
     startGameCounter = 1;
-    victoryStat = victoryStat + userScore;
+    victoryStat = userScore / startGameCounter * 100;
     allGameStat = allGameStat + userScore + computerScore;
 
     userScore = 0;
@@ -185,25 +183,28 @@ var button = document
   });
 
 
-document.getElementById("launch").addEventListener("click", function() {
-  if(startGameCounter < 10) {
+document.getElementById("launch").addEventListener("click", function () {
+  if (startGameCounter < 10) {
     startGame();
     let nbRound = document.getElementById("nb-game");
     nbRound.innerHTML = "Manche n°" + startGameCounter++;
     localStorage.setItem('manche-save', startGameCounter)
   } else {
     alert("Vous avez atteint le nombre maximum de parties autorisées, Appuyer sur rejouer pour lancer une nouvelles partie.");
-    if(userScore>computerScore){
+    if (userScore > computerScore) {
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Victoire ROYALE!";
     }
-    else if(userScore<computerScore){
+    else if (userScore < computerScore) {
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Défaite CUISANTE!";
     }
     else {
       let viewResult = document.getElementById("result");
-      viewResult.innerHTML = "ÉGALITÉ !"; 
+      viewResult.innerHTML = "ÉGALITÉ !";
     }
+    viewPourcent = document.getElementById("stats");
+    viewPourcent.innerHTML = "Votre pourcentage de victoire :" + vicro;
   }
 });
+
