@@ -116,9 +116,7 @@ document.getElementById("spocke").addEventListener("click", function () {
 let nbRound = document.getElementById("nb-game");
 nbRound.innerHTML = "Manche n°" + roundNumber++;
 
-var button = document
-  .getElementById("launch")
-  .addEventListener("click", function startGame() {
+function startGame() {
     let computerChoice = options[Math.floor(Math.random() * options.length)];
     console.log(userChoice + "vs" + computerChoice);
     if (computerChoice == "paper") {
@@ -170,7 +168,7 @@ var button = document
       viewResult.innerHTML = "Défaite !";
       i = i++;;
     }
-  });
+  };
 
 var button = document
   .getElementById("restart")
@@ -192,13 +190,13 @@ var button = document
   });
 
 
-//   var startGameCounter = 0;
-// document.getElementById("launch").addEventListener("click", function() {
-//   if(startGameCounter < 10) {
-//     startGame();
-//     startGameCounter++;
-//   } else {
-//     alert("Vous avez atteint le nombre maximum de parties autorisées");
-//     document.getElementById("launch").disabled = true;
-//   }
-// });
+  var startGameCounter = 0;
+document.getElementById("launch").addEventListener("click", function() {
+  if(startGameCounter < 10) {
+    startGame();
+    startGameCounter++;
+  } else {
+    alert("Vous avez atteint le nombre maximum de parties autorisées");
+    document.getElementById("launch").disabled = true;
+  }
+});
