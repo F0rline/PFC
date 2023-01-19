@@ -2,6 +2,7 @@ var userChoice;
 var radioButtons = document.getElementsByName("choice");
 var i = 0;
 let victoryStat;
+let allGameStat;
 
 console.log(radioButtons);
 if (radioButtons.checked) {
@@ -166,8 +167,9 @@ function startGame() {
 var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
-    clear()
+    clear();
     startGameCounter = 1;
+    
     victoryStat = userScore / startGameCounter * 100;
     allGameStat = allGameStat + userScore + computerScore;
 
@@ -189,7 +191,9 @@ document.getElementById("launch").addEventListener("click", function () {
     startGame();
     let nbRound = document.getElementById("nb-game");
     nbRound.innerHTML = "Manche n°" + startGameCounter++;
-    localStorage.setItem('manche-save', startGameCounter)
+    localStorage.setItem('manche-save', startGameCounter);
+    let viewPourcent = document.getElementById("stats");
+    viewPourcent.innerHTML = "Votre pourcentage de victoire :" + victoryStat;
   } else {
     alert("Vous avez atteint le nombre maximum de parties autorisées, Appuyer sur rejouer pour lancer une nouvelles partie.");
     if (userScore > computerScore) {
@@ -204,7 +208,5 @@ document.getElementById("launch").addEventListener("click", function () {
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "ÉGALITÉ !";
     }
-    viewPourcent = document.getElementById("stats");
-    viewPourcent.innerHTML = "Votre pourcentage de victoire :" + victoryStat;
   }
 });
