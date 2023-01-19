@@ -112,7 +112,7 @@ var button = document
         (userChoice === "spocke" &&
           (computerChoice === "rock" || computerChoice === "scissor"))
       ) {
-        audio2.play();
+        audio3.play();
       let scoreUser = document.getElementById("userScore");
         scoreUser.innerHTML = "Votre Score: " + userScore++;
         i = i++;
@@ -121,7 +121,7 @@ var button = document
         viewResult.innerHTML = "Victoire !";
         i = i++;
       } else {
-        audio3.play();
+        audio2.play();
         let scoreIa = document.getElementById("computerScore");
         scoreIa.innerHTML = "Score IA: " + computerScore++;
 
