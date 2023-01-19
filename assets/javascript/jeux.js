@@ -13,15 +13,53 @@ if (radioButtons.checked) {
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 // Jouer un son
+// paper = document.getElementsById("paper")
+// paperSong = document.getEmentById("testAudio")
 
+// paper.addEventListener("click", function() {
+//   paperSong.play();
+// });
+
+
+playButtonPaper = document.getElementById("paper");
+
+playButtonPaper.addEventListener("click", function() {
+  audioPaper = new Audio("/assets/song/paper-song-effect.mp3");
+  audioPaper.play()
+});
+
+playButtonRock = document.getElementById("rock");
+
+playButtonRock.addEventListener("click", function() {
+  audioRock = new Audio("/assets/song/stone-song-effect.mp3");
+  audioRock.play()
+});
+
+playButtonScissor = document.getElementById("scissor");
+
+playButtonScissor.addEventListener("click", function() {
+  audioScissors = new Audio("/assets/song/scissors-song-effect.mp3");
+  audioScissors.play()
+});
+
+playButtonLizard = document.getElementById("lizard");
 playButton = document.getElementById("paper", "rock");
 audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
-audio2 = new Audio("/song/lose-sound.mp3");
-audio3 = new Audio("/song/win-sound.mp3");
 
-playButton.addEventListener("click", function () {
+playButtonLizard.addEventListener("click", function() {
+  audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
+  audioLizard.play()
+playButton.addEventListener("click", function() {
   audio.play();
 });
+
+playButtonSpocke = document.getElementById("spocke");
+
+playButtonSpocke.addEventListener("click", function() {
+  audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
+  audioSpocke.play()
+});
+
 
 // --Save
 
@@ -34,8 +72,15 @@ playButton.addEventListener("click", function () {
 
 // let cleanScore = localStorage.clear();
 
+<<<<<<< HEAD
 userScore = localStorage.getItem('User-Score');
 computerScore = localStorage.getItem('Computer-Score');
+=======
+
+
+userScore = 1;
+computerScore = 1;
+>>>>>>> f5c73999c79b775d119d296a7415da61a18a8c42
 roundNumber = 2;
 
 
