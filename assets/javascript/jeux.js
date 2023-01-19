@@ -116,14 +116,14 @@ var button = document.getElementById("launch").addEventListener("click", functio
       (userChoice === "spock" &&
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
-      audio2.play();
+      audio3.play();
       let scoreUser = document.getElementById("userScore");
       scoreUser.innerHTML = "Votre Score: " + userScore++;
 
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Victoire !"
       } else {
-        audio3.play();
+        audio2.play();
         let scoreIa = document.getElementById("computerScore");
         scoreIa.innerHTML = "Score IA: " + computerScore++;
 
