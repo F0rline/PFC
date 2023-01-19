@@ -3,6 +3,7 @@ var radioButtons = document.getElementsByName("choice");
 var i = 0;
 let victoryStat;
 let allGameStat;
+
 console.log(radioButtons);
 if (radioButtons.checked) {
   userChoice = radioButtons.className;
@@ -24,8 +25,6 @@ playButton.addEventListener("click", function () {
 
 // --Save
 
-saveScore = localStorage.setItem('User Score', userScore);
-console.log(saveScore)
 
 // let saveScoreJoueur = localStorage.setItem('ScoreJoueur', UserScore);
 // let saveScoreComputer = localStorage.setItem('ScoreOrdinateur', ComputerScore);
@@ -35,9 +34,14 @@ console.log(saveScore)
 
 // let cleanScore = localStorage.clear();
 
-userScore = 1;
-computerScore = 1;
+userScore = localStorage.getItem('User-Score');
+computerScore = localStorage.getItem('Computer-Score');
 roundNumber = 2;
+
+
+
+
+
 
 document.getElementById("rock").addEventListener("click", function () {
   userChoice = "rock";
@@ -110,6 +114,7 @@ var button = document
         (userChoice === "spocke" &&
           (computerChoice === "rock" || computerChoice === "scissor"))
       ) {
+        localStorage.setItem('User-Score', userScore);
         audio3.play();
       let scoreUser = document.getElementById("userScore");
         scoreUser.innerHTML = "Votre Score: " + userScore++;
@@ -119,6 +124,7 @@ var button = document
         viewResult.innerHTML = "Victoire !";
         i = i++;
       } else {
+        localStorage.setItem('Computer-Score', computerScore);
         audio2.play();
         let scoreIa = document.getElementById("computerScore");
         scoreIa.innerHTML = "Score IA: " + computerScore++;
@@ -132,6 +138,7 @@ var button = document
 var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
+    localStorage.clear();
     victoryStat = victoryStat + userScore;
     allGameStat = allGameStat + userScore + computerScore;
 
@@ -145,4 +152,5 @@ var button = document
 
     document.getElementById("choise-computer").src="/assets/img/placeholder.svg";
     document.getElementById("choise-user").src="/assets/img/placeholder.svg";
+
   });
