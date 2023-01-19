@@ -23,6 +23,8 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 playButton = document.getElementById("paper", "rock");
 audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
+audio2 = new Audio("/song/lose-sound.mp3");
+audio3 = new Audio("/song/win-sound.mp3");
 
 playButton.addEventListener("click", function() {
   audio.play();
@@ -114,12 +116,14 @@ var button = document.getElementById("launch").addEventListener("click", functio
       (userChoice === "spock" &&
         (computerChoice === "rock" || computerChoice === "scissor"))
     ) {
+      audio2.play();
       let scoreUser = document.getElementById("userScore");
       scoreUser.innerHTML = "Votre Score: " + userScore++;
 
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Victoire !"
       } else {
+        audio3.play();
         let scoreIa = document.getElementById("computerScore");
         scoreIa.innerHTML = "Score IA: " + computerScore++;
 
