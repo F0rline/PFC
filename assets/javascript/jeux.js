@@ -190,3 +190,15 @@ var button = document
     document.getElementById("choise-computer").src = "/assets/img/placeholder.svg";
     document.getElementById("choise-user").src = "/assets/img/placeholder.svg";
   });
+
+
+//   var startGameCounter = 0;
+// document.getElementById("launch").addEventListener("click", function() {
+//   if(startGameCounter < 10) {
+//     startGame();
+//     startGameCounter++;
+//   } else {
+//     alert("Vous avez atteint le nombre maximum de parties autorisées");
+//     document.getElementById("launch").disabled = true;
+//   }
+// });
