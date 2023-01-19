@@ -1,6 +1,7 @@
 var userChoice;
 var radioButtons = document.getElementsByName("choice");
 var i = 0;
+let victoryStat;
 
 console.log(radioButtons);
 if (radioButtons.checked) {
