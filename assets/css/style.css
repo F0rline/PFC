@@ -9,6 +9,7 @@ html,body {
 body {
     background-image: url(/assets/img/background.png);
     background-blend-mode: luminosity;
+    background-color: #ACD3FF;
 }
 
 h1 {
@@ -63,12 +64,11 @@ button {
     height: 85px;
     width: auto;
 }
-.linear-inverted{
+footer{
+    height: 50px;
+    margin-top: auto;
     padding: 50px 0px;
     background-image: linear-gradient(0, white, rgba(1, 1, 1, 0.00));  
-}
-body{
-    background-color: #ACD3FF;
 }
 
 .col-result {
@@ -100,7 +100,7 @@ body{
     font-size: 12px;
     color: #00256E;
     border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 1);
     border-color: #00256E;
     padding: 2px 15px;
 }
