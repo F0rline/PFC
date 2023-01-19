@@ -23,28 +23,28 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 playButtonPaper = document.getElementById("paper");
 
-playButtonPaper.addEventListener("click", function() {
+playButtonPaper.addEventListener("click", function () {
   audioPaper = new Audio("/assets/song/paper-song-effect.mp3");
   audioPaper.play()
 });
 
 playButtonRock = document.getElementById("rock");
 
-playButtonRock.addEventListener("click", function() {
+playButtonRock.addEventListener("click", function () {
   audioRock = new Audio("/assets/song/stone-song-effect.mp3");
   audioRock.play()
 });
 
 playButtonScissor = document.getElementById("scissor");
 
-playButtonScissor.addEventListener("click", function() {
+playButtonScissor.addEventListener("click", function () {
   audioScissors = new Audio("/assets/song/scissors-song-effect.mp3");
   audioScissors.play()
 });
 
 playButtonLizard = document.getElementById("lizard");
 
-playButtonLizard.addEventListener("click", function() {
+playButtonLizard.addEventListener("click", function () {
   audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
   audioLizard.play()
 });
@@ -52,7 +52,7 @@ playButtonLizard.addEventListener("click", function() {
 
 playButtonSpocke = document.getElementById("spocke");
 
-playButtonSpocke.addEventListener("click", function() {
+playButtonSpocke.addEventListener("click", function () {
   audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
   audioSpocke.play()
 });
@@ -67,22 +67,9 @@ playButtonSpocke.addEventListener("click", function() {
 // let getScoreJoueur = localStorage.getItem('ScoreJoueur');
 // let getScoreComputer = localStorage.getItem('ScoreOrdinateur');
 
-// let cleanScore = localStorage.clear();
-
-<<<<<<< HEAD
 userScore = localStorage.getItem('User-Score');
 computerScore = localStorage.getItem('Computer-Score');
-=======
-
-
-userScore = 1;
-computerScore = 1;
->>>>>>> f5c73999c79b775d119d296a7415da61a18a8c42
 roundNumber = 2;
-
-
-
-
 
 
 document.getElementById("rock").addEventListener("click", function () {
@@ -116,65 +103,63 @@ document.getElementById("spocke").addEventListener("click", function () {
 });
 
 
-  let nbRound = document.getElementById("nb-game");
-  nbRound.innerHTML = "Manche n°" + roundNumber++;
+let nbRound = document.getElementById("nb-game");
+nbRound.innerHTML = "Manche n°" + roundNumber++;
 
 var button = document
   .getElementById("launch")
   .addEventListener("click", function startGame() {
     let computerChoice = options[Math.floor(Math.random() * options.length)];
-      console.log(userChoice + "vs" + computerChoice);
-      if (computerChoice == "paper") {
-        document.getElementById("choise-computer").src = "/assets/img/paper.svg";
-        console.log(computerChoice);
-      } else if (computerChoice == "rock") {
-        document.getElementById("choise-computer").src = "/assets/img/stone.svg";
-        console.log(computerChoice);
-      } else if (computerChoice == "scissor") {
-        document.getElementById("choise-computer").src =
-          "/assets/img/scissors.svg";
-        console.log(computerChoice);
-      } else if (computerChoice == "lizard") {
-        document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
-        console.log(computerChoice);
-      } else if (computerChoice == "spock") {
-        document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
-        console.log(computerChoice);
-      }
-      if (userChoice === computerChoice) {
-        let viewResult = document.getElementById("result");
-        viewResult.innerHTML = "Égalité !";
-      } else if (
-        (userChoice === "rock" &&
-          (computerChoice === "scissor" || computerChoice === "lizard")) ||
-        (userChoice === "paper" &&
-          (computerChoice === "rock" || computerChoice === "spock")) ||
-        (userChoice === "scissor" &&
-          (computerChoice === "paper" || computerChoice === "lizard")) ||
-        (userChoice === "lizard" &&
-          (computerChoice === "paper" || computerChoice === "spock")) ||
-        (userChoice === "spocke" &&
-          (computerChoice === "rock" || computerChoice === "scissor"))
-      ) {
-        localStorage.setItem('User-Score', userScore);
-        audio3.play();
+    console.log(userChoice + "vs" + computerChoice);
+    if (computerChoice == "paper") {
+      document.getElementById("choise-computer").src = "/assets/img/paper.svg";
+      console.log(computerChoice);
+    } else if (computerChoice == "rock") {
+      document.getElementById("choise-computer").src = "/assets/img/stone.svg";
+      console.log(computerChoice);
+    } else if (computerChoice == "scissor") {
+      document.getElementById("choise-computer").src =
+        "/assets/img/scissors.svg";
+      console.log(computerChoice);
+    } else if (computerChoice == "lizard") {
+      document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
+      console.log(computerChoice);
+    } else if (computerChoice == "spock") {
+      document.getElementById("choise-computer").src = "/assets/img/spocke.svg";
+      console.log(computerChoice);
+    }
+    if (userChoice === computerChoice) {
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Égalité !";
+    } else if (
+      (userChoice === "rock" &&
+        (computerChoice === "scissor" || computerChoice === "lizard")) ||
+      (userChoice === "paper" &&
+        (computerChoice === "rock" || computerChoice === "spock")) ||
+      (userChoice === "scissor" &&
+        (computerChoice === "paper" || computerChoice === "lizard")) ||
+      (userChoice === "lizard" &&
+        (computerChoice === "paper" || computerChoice === "spock")) ||
+      (userChoice === "spocke" &&
+        (computerChoice === "rock" || computerChoice === "scissor"))
+    ) {
+      localStorage.setItem('User-Score', userScore);
       let scoreUser = document.getElementById("userScore");
-        scoreUser.innerHTML = "Votre Score: " + userScore++;
-        i = i++;
+      scoreUser.innerHTML = "Votre Score: " + userScore++;
+      i = i++;
 
-        let viewResult = document.getElementById("result");
-        viewResult.innerHTML = "Victoire !";
-        i = i++;
-      } else {
-        localStorage.setItem('Computer-Score', computerScore);
-        audio2.play();
-        let scoreIa = document.getElementById("computerScore");
-        scoreIa.innerHTML = "Score IA: " + computerScore++;
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Victoire !";
+      i = i++;
+    } else {
+      localStorage.setItem('Computer-Score', computerScore);
+      let scoreIa = document.getElementById("computerScore");
+      scoreIa.innerHTML = "Score IA: " + computerScore++;
 
-        let viewResult = document.getElementById("result");
-        viewResult.innerHTML = "Défaite !";
-        i = i++;;
-      }
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Défaite !";
+      i = i++;;
+    }
   });
 
 var button = document
@@ -192,7 +177,6 @@ var button = document
     let scoreIa = document.getElementById("computerScore");
     scoreIa.innerHTML = "Score IA: 0";
 
-    document.getElementById("choise-computer").src="/assets/img/placeholder.svg";
-    document.getElementById("choise-user").src="/assets/img/placeholder.svg";
-
+    document.getElementById("choise-computer").src = "/assets/img/placeholder.svg";
+    document.getElementById("choise-user").src = "/assets/img/placeholder.svg";
   });
