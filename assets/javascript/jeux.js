@@ -12,12 +12,6 @@ if (radioButtons.checked) {
 let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 // Jouer un son
-// paper = document.getElementsById("paper")
-// paperSong = document.getEmentById("testAudio")
-
-// paper.addEventListener("click", function() {
-//   paperSong.play();
-// });
 
 playButton = document.getElementById("paper", "rock");
 audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
@@ -29,6 +23,9 @@ playButton.addEventListener("click", function () {
 });
 
 // --Save
+
+saveScore = localStorage.setItem('User Score', userScore);
+console.log(saveScore)
 
 // let saveScoreJoueur = localStorage.setItem('ScoreJoueur', UserScore);
 // let saveScoreComputer = localStorage.setItem('ScoreOrdinateur', ComputerScore);
