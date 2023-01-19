@@ -42,6 +42,7 @@ playButton.addEventListener("click", function() {
 
 userScore = 1;
 computerScore = 1;
+roundNumber = 2;
 
 document.getElementById("rock").addEventListener("click", function (){
   userChoice = "rock";
@@ -77,6 +78,9 @@ document.getElementById("spocke").addEventListener("click", function (){
 var button = document.getElementById("launch").addEventListener("click", function startGame(){
   let computerChoice = options[Math.floor(Math.random() * options.length)];
   console.log(userChoice + "vs" + computerChoice)
+
+  let nbRound = document.getElementById("nb-game");
+  nbRound.innerHTML = "Manche n°" + roundNumber++;
 
   if (computerChoice == "paper") {
     document.getElementById("choise-computer").src = "/assets/img/paper.svg";
@@ -120,5 +124,5 @@ var button = document.getElementById("launch").addEventListener("click", functio
         scoreIa.innerHTML = "Score IA: " + computerScore++;
 
         let viewResult = document.getElementById("result");
-      viewResult.innerHTML = "Défaite !"
+      viewResult.innerHTML = "Défaite !";
       }})
