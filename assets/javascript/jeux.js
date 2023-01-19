@@ -57,19 +57,17 @@ playButtonSpocke.addEventListener("click", function () {
   audioSpocke.play()
 });
 
+// save
 
-// --Save
 
 
-// let saveScoreJoueur = localStorage.setItem('ScoreJoueur', UserScore);
-// let saveScoreComputer = localStorage.setItem('ScoreOrdinateur', ComputerScore);
-
-// let getScoreJoueur = localStorage.getItem('ScoreJoueur');
-// let getScoreComputer = localStorage.getItem('ScoreOrdinateur');
+function clear()  {
+  localStorage.clear();
+  };
 
 userScore = localStorage.getItem('User-Score');
 computerScore = localStorage.getItem('Computer-Score');
-roundNumber = 2;
+startGameCounter = localStorage.getItem('manche-save');
 
 
 document.getElementById("rock").addEventListener("click", function () {
@@ -113,8 +111,7 @@ document.getElementById("spocke").addEventListener("click", function () {
 });
 
 
-let nbRound = document.getElementById("nb-game");
-nbRound.innerHTML = "Manche n°" + roundNumber++;
+
 
 function startGame() {
     let computerChoice = options[Math.floor(Math.random() * options.length)];
@@ -170,8 +167,8 @@ function startGame() {
 var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
-    localStorage.clear();
-    startGameCounter = 0;
+    clear()
+    startGameCounter = 1;
     victoryStat = victoryStat + userScore;
     allGameStat = allGameStat + userScore + computerScore;
 
@@ -188,13 +185,14 @@ var button = document
   });
 
 
-  var startGameCounter = 0;
 document.getElementById("launch").addEventListener("click", function() {
   if(startGameCounter < 10) {
     startGame();
-    startGameCounter++;
+    let nbRound = document.getElementById("nb-game");
+    nbRound.innerHTML = "Manche n°" + startGameCounter++;
+    localStorage.setItem('manche-save', startGameCounter)
   } else {
-    alert("Vous avez atteint le nombre maximum de parties autorisées");
+    alert("Vous avez atteint le nombre maximum de parties autorisées, Appuyer sur rejouer pour lancer une nouvelles partie.");
     if(userScore>computerScore){
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Victoire ROYALE!";
