@@ -42,15 +42,12 @@ playButtonScissor.addEventListener("click", function() {
 });
 
 playButtonLizard = document.getElementById("lizard");
-playButton = document.getElementById("paper", "rock");
-audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
 
 playButtonLizard.addEventListener("click", function() {
   audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
   audioLizard.play()
-playButton.addEventListener("click", function() {
-  audio.play();
 });
+
 
 playButtonSpocke = document.getElementById("spocke");
 
