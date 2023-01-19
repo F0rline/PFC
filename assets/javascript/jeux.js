@@ -22,7 +22,7 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 
 
 playButton = document.getElementById("paper", "rock");
-audio = document.getElementById("testAudio", "testAudio2");
+audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
 
 playButton.addEventListener("click", function() {
   audio.play();
