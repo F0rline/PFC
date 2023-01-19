@@ -71,7 +71,7 @@ document.getElementById("spocke").addEventListener("click", function () {
   document.getElementById("choise-user").src = "/assets/img/spocke.svg";
   console.log(userChoice);
 });
-let computerChoice = options[Math.floor(Math.random() * options.length)];
+
 
   let nbRound = document.getElementById("nb-game");
   nbRound.innerHTML = "Manche n°" + roundNumber++;
@@ -79,6 +79,7 @@ let computerChoice = options[Math.floor(Math.random() * options.length)];
 var button = document
   .getElementById("launch")
   .addEventListener("click", function startGame() {
+    let computerChoice = options[Math.floor(Math.random() * options.length)];
       console.log(userChoice + "vs" + computerChoice);
       if (computerChoice == "paper") {
         document.getElementById("choise-computer").src = "/assets/img/paper.svg";
