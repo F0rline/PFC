@@ -154,11 +154,9 @@ function startGame() {
       localStorage.setItem('User-Score', userScore);
       let scoreUser = document.getElementById("userScore");
       scoreUser.innerHTML = "Votre Score: " + userScore++;
-      i = i++;
 
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Victoire !";
-      i = i++;
     } else {
       localStorage.setItem('Computer-Score', computerScore);
       let scoreIa = document.getElementById("computerScore");
@@ -166,7 +164,6 @@ function startGame() {
 
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "Défaite !";
-      i = i++;;
     }
   };
 
@@ -174,6 +171,7 @@ var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
     localStorage.clear();
+    startGameCounter = 0;
     victoryStat = victoryStat + userScore;
     allGameStat = allGameStat + userScore + computerScore;
 
@@ -197,6 +195,17 @@ document.getElementById("launch").addEventListener("click", function() {
     startGameCounter++;
   } else {
     alert("Vous avez atteint le nombre maximum de parties autorisées");
-    document.getElementById("launch").disabled = true;
+    if(userScore>computerScore){
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Victoire ROYALE!";
+    }
+    else if(userScore<computerScore){
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "Défaite CUISANTE!";
+    }
+    else {
+      let viewResult = document.getElementById("result");
+      viewResult.innerHTML = "ÉGALITÉ !"; 
+    }
   }
 });
