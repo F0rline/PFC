@@ -20,14 +20,40 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 //   paperSong.play();
 // });
 
+playButtonPaper = document.getElementById("paper");
 
-playButton = document.getElementById("paper", "rock");
-audio = new Audio("/song/all-sheep-sounds-minecraft-sound-effect-for-editing.mp3");
-
-playButton.addEventListener("click", function() {
-  audio.play();
+playButtonPaper.addEventListener("click", function() {
+  audioPaper = new Audio("/assets/song/paper-song-effect.mp3");
+  audioPaper.play()
 });
 
+playButtonRock = document.getElementById("rock");
+
+playButtonRock.addEventListener("click", function() {
+  audioRock = new Audio("/assets/song/stone-song-effect.mp3");
+  audioRock.play()
+});
+
+playButtonScissor = document.getElementById("scissor");
+
+playButtonScissor.addEventListener("click", function() {
+  audioScissors = new Audio("/assets/song/scissors-song-effect.mp3");
+  audioScissors.play()
+});
+
+playButtonLizard = document.getElementById("lizard");
+
+playButtonLizard.addEventListener("click", function() {
+  audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
+  audioLizard.play()
+});
+
+playButtonSpocke = document.getElementById("spocke");
+
+playButtonSpocke.addEventListener("click", function() {
+  audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
+  audioSpocke.play()
+});
 
 // --Save
 
