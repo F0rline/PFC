@@ -21,43 +21,6 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 // });
 
 
-playButtonPaper = document.getElementById("paper");
-
-playButtonPaper.addEventListener("click", function() {
-  audioPaper = new Audio("/assets/song/paper-song-effect.mp3");
-  audioPaper.play()
-});
-
-playButtonRock = document.getElementById("rock");
-
-playButtonRock.addEventListener("click", function() {
-  audioRock = new Audio("/assets/song/stone-song-effect.mp3");
-  audioRock.play()
-});
-
-playButtonScissor = document.getElementById("scissor");
-
-playButtonScissor.addEventListener("click", function() {
-  audioScissors = new Audio("/assets/song/scissors-song-effect.mp3");
-  audioScissors.play()
-});
-
-playButtonLizard = document.getElementById("lizard");
-
-playButtonLizard.addEventListener("click", function() {
-  audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
-  audioLizard.play()
-});
-
-
-playButtonSpocke = document.getElementById("spocke");
-
-playButtonSpocke.addEventListener("click", function() {
-  audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
-  audioSpocke.play()
-});
-
-
 // --Save
 
 
@@ -69,49 +32,52 @@ playButtonSpocke.addEventListener("click", function() {
 
 // let cleanScore = localStorage.clear();
 
-<<<<<<< HEAD
 userScore = localStorage.getItem('User-Score');
 computerScore = localStorage.getItem('Computer-Score');
-=======
 
 
 userScore = 1;
 computerScore = 1;
->>>>>>> f5c73999c79b775d119d296a7415da61a18a8c42
 roundNumber = 2;
-
-
-
-
 
 
 document.getElementById("rock").addEventListener("click", function () {
   userChoice = "rock";
   document.getElementById("choise-user").src = "/assets/img/stone.svg";
+  audioRock = new Audio("/assets/song/stone-song-effect.mp3");
+  audioRock.play()
   console.log(userChoice);
 });
 
 document.getElementById("paper").addEventListener("click", function () {
   userChoice = "paper";
   document.getElementById("choise-user").src = "/assets/img/paper.svg";
+  audioPaper = new Audio("/assets/song/paper-song-effect.mp3");
+  audioPaper.play()
   console.log(userChoice);
 });
 
 document.getElementById("scissor").addEventListener("click", function () {
   userChoice = "scissor";
   document.getElementById("choise-user").src = "/assets/img/scissors.svg";
+  audioScissors = new Audio("/assets/song/scissors-song-effect.mp3");
+  audioScissors.play()
   console.log(userChoice);
 });
 
 document.getElementById("lizard").addEventListener("click", function () {
   userChoice = "lizard";
   document.getElementById("choise-user").src = "/assets/img/lizard.svg";
+  audioLizard = new Audio("/assets/song/lizard-song-effect.mp3");
+  audioLizard.play()
   console.log(userChoice);
 });
 
 document.getElementById("spocke").addEventListener("click", function () {
   userChoice = "spocke";
   document.getElementById("choise-user").src = "/assets/img/spocke.svg";
+  audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
+  audioSpocke.play()
   console.log(userChoice);
 });
 
