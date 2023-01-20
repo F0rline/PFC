@@ -1,8 +1,6 @@
 var userChoice;
 var radioButtons = document.getElementsByName("choice");
 var i = 0;
-let victoryStat;
-let allGameStat;
 
 console.log(radioButtons);
 if (radioButtons.checked) {
@@ -20,7 +18,7 @@ let options = ["rock", "paper", "scissor", "lizard", "spock"];
 //   paperSong.play();
 // });
 
-
+// Audio
 playButtonPaper = document.getElementById("paper");
 
 playButtonPaper.addEventListener("click", function () {
@@ -56,9 +54,6 @@ playButtonSpocke.addEventListener("click", function () {
   audioSpocke = new Audio("/assets/song/spoke-song-effect.mp3");
   audioSpocke.play()
 });
-
-// save
-
 
 
 function clear() {
@@ -123,8 +118,7 @@ function startGame() {
     document.getElementById("choise-computer").src = "/assets/img/stone.svg";
     console.log(computerChoice);
   } else if (computerChoice == "scissor") {
-    document.getElementById("choise-computer").src =
-      "/assets/img/scissors.svg";
+    document.getElementById("choise-computer").src = "/assets/img/scissors.svg";
     console.log(computerChoice);
   } else if (computerChoice == "lizard") {
     document.getElementById("choise-computer").src = "/assets/img/lizard.svg";
@@ -167,11 +161,7 @@ function startGame() {
 var button = document
   .getElementById("restart")
   .addEventListener("click", function restartGame() {
-    clear();
-    startGameCounter = 1;
-    
-    victoryStat = userScore / startGameCounter * 100;
-    allGameStat = allGameStat + userScore + computerScore;
+    clear()
 
     userScore = 0;
     let scoreUser = document.getElementById("userScore");
@@ -189,11 +179,16 @@ var button = document
 document.getElementById("launch").addEventListener("click", function () {
   if (startGameCounter < 10) {
     startGame();
+
+    let allGameStat = 0
+    let victoryStat = 0
+    startGameCounter = 1;
+    victoryStat = userScore / startGameCounter * 100;
+    allGameStat = allGameStat + userScore + computerScore;
+
     let nbRound = document.getElementById("nb-game");
     nbRound.innerHTML = "Manche n°" + startGameCounter++;
-    localStorage.setItem('manche-save', startGameCounter);
-    let viewPourcent = document.getElementById("stats");
-    viewPourcent.innerHTML = "Votre pourcentage de victoire :" + victoryStat;
+    localStorage.setItem('manche-save', startGameCounter)
   } else {
     alert("Vous avez atteint le nombre maximum de parties autorisées, Appuyer sur rejouer pour lancer une nouvelles partie.");
     if (userScore > computerScore) {
@@ -208,5 +203,7 @@ document.getElementById("launch").addEventListener("click", function () {
       let viewResult = document.getElementById("result");
       viewResult.innerHTML = "ÉGALITÉ !";
     }
+    viewPourcent = this.querySelector("#stats");
+    viewPourcent.innerHTML = "Votre pourcentage de victoire :" + victoryStat;
   }
 });
