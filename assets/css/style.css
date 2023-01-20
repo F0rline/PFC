@@ -7,7 +7,7 @@ html,body {
 }
 
 body {
-    background-image: url(/assets/img/background.png);
+    background-image: url(assets/img/background.png);
     background-blend-mode: luminosity;
     background-color: #ACD3FF;
 }
